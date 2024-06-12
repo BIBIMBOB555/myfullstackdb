@@ -18,4 +18,6 @@ public class MovieDTO {
         image = movie.getImage();
         content = movie.getContent();
     }
+
+
 }

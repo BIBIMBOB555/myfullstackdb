@@ -22,4 +22,22 @@ public class MovieController {
     public MovieDTO movie(@PathVariable long id) {
         return movieService.findById(id);
     }
+
+
+
+    @PostMapping("/movie")
+    public MovieDTO addMovie(@RequestBody MovieDTO movieDTO) {
+        return movieService.addMovie(movieDTO);
+    }
+
+    @PutMapping("/movie/{id}")
+    public MovieDTO updateMovie(@PathVariable long id, @RequestBody MovieDTO movieDTO) {
+        return movieService.updateMovie(id, movieDTO);
+    }
+
+    @DeleteMapping("/movie/{id}")
+    public void deleteMovie(@PathVariable long id) {
+        movieService.deleteMovie(id);
+    }
+
 }
